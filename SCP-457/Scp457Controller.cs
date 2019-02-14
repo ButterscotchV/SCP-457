@@ -55,9 +55,9 @@ namespace SCP_457
 					if (affectedPlayer.GetHealth() >= affectedPlayerRole.MaxHP) continue;
 
 					// Get a random amount of health to heal for based on the configurable values
-					int randHeal = EventLogic.Rng.Next((int)(affectedPlayerRole.MaxHP * eventLogic.MinHealHealth), (int)(affectedPlayerRole.MaxHP * eventLogic.MaxHealHealth));
+					int randHeal = EventLogic.Rng.Next((int) (affectedPlayerRole.MaxHP * eventLogic.MinHealHealth), (int) (affectedPlayerRole.MaxHP * eventLogic.MaxHealHealth));
 
-					plugin.Debug($"Healing player \"{affectedPlayer.Name}\" for {randHeal} hp!");
+					// plugin.Debug($"Healing player \"{affectedPlayer.Name}\" for {randHeal} hp!");
 
 					// Heal the affected player the random amount, limiting their health at the role's maximum health
 					affectedPlayer.SetHealth(Math.Min(affectedPlayerRole.MaxHP, affectedPlayer.GetHealth() + randHeal));
@@ -65,8 +65,8 @@ namespace SCP_457
 				// Damage enemies
 				else
 				{
-					plugin.Debug($"Damaging player \"{affectedPlayer.Name}\" for {Damage} hp!");
-					affectedPlayer.Damage((int)Damage, DamageType.POCKET);
+					// plugin.Debug($"Damaging player \"{affectedPlayer.Name}\" for {Damage} hp!");
+					affectedPlayer.Damage((int) Damage, DamageType.POCKET);
 				}
 			}
 		}

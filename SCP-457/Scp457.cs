@@ -39,19 +39,24 @@ namespace SCP_457
 			EventLogic = new EventLogic(this);
 			AddEventHandlers(EventLogic);
 			AddCommand("SPAWNSCP457", new SpawnScp457Command(this));
-			AddConfig(new ConfigSetting("scp457_spawnchance", 15, SettingType.NUMERIC, true, "The percent chance for SPC-457 to spawn."));
-			AddConfig(new ConfigSetting("scp457_health", 500, SettingType.NUMERIC, true, "The amount of health points that SCP-457 has."));
+
 			AddConfig(new ConfigSetting("scp457_min_health_heal", 0.35f, SettingType.FLOAT, true, "The minimum percent of health SCP-457 can randomly heal."));
 			AddConfig(new ConfigSetting("scp457_max_health_heal", 0.45f, SettingType.FLOAT, true, "The maximum percent of health SCP-457 can randomly heal."));
-			AddConfig(new ConfigSetting("scp457_baseradius", 3f, SettingType.FLOAT, true, "The base radius around SCP-457 that damages enemies."));
-			AddConfig(new ConfigSetting("scp457_radiusstep", 1.5f, SettingType.FLOAT, true, "The amount the radius will increase every time SCP-457 hits an enemy."));
-			AddConfig(new ConfigSetting("scp457_maxradius", 7f, SettingType.FLOAT, true, "The maximum radius around SCP-457 that damages enemies."));
-			AddConfig(new ConfigSetting("scp457_radiusdecrease", 0.1f, SettingType.FLOAT, true, "The amount per second the SCP-457's damage radius will decrease."));
+
 			AddConfig(new ConfigSetting("scp457_basedamage", 4f, SettingType.FLOAT, true, "The base damage per second the radius around SCP-457 will inflict on enemies."));
-			AddConfig(new ConfigSetting("scp457_damagestep", 5f, SettingType.FLOAT, true, "The amount that the damage the radius around SCP-457 inflicts on enemies increases per hit."));
 			AddConfig(new ConfigSetting("scp457_maxdamage", 30f, SettingType.FLOAT, true, "The max damage per second the radius around SCP-457 will inflict on enemies."));
 			AddConfig(new ConfigSetting("scp457_damagedecrease", 0.2f, SettingType.FLOAT, true, "The amount that the damage the radius around SCP-457 inflicts on enemies decreases per second."));
+			AddConfig(new ConfigSetting("scp457_damagestep", 5f, SettingType.FLOAT, true, "The amount that the damage the radius around SCP-457 inflicts on enemies increases per hit."));
+
+			AddConfig(new ConfigSetting("scp457_baseradius", 3f, SettingType.FLOAT, true, "The base radius around SCP-457 that damages enemies."));
+			AddConfig(new ConfigSetting("scp457_maxradius", 7f, SettingType.FLOAT, true, "The maximum radius around SCP-457 that damages enemies."));
+			AddConfig(new ConfigSetting("scp457_radiusdecrease", 0.1f, SettingType.FLOAT, true, "The amount per second the SCP-457's damage radius will decrease."));
+			AddConfig(new ConfigSetting("scp457_radiusstep", 1.5f, SettingType.FLOAT, true, "The amount the radius will increase every time SCP-457 hits an enemy."));
+
+			AddConfig(new ConfigSetting("scp457_health", 500, SettingType.NUMERIC, true, "The amount of health points that SCP-457 has."));
 			AddConfig(new ConfigSetting("scp457_tutorialallies", true, SettingType.BOOL, true, "If true, SCP-457 will not hurt tutorials. Useful for the Serpents Hand plugin."));
+			AddConfig(new ConfigSetting("scp457_spawnchance", 15f, SettingType.FLOAT, true, "The percent chance for SPC-457 to spawn."));
+
 			AddConfig(new ConfigSetting("scp457_rank", new string[]
 			{
 				"owner",

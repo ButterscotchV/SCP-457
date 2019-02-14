@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using Smod2;
 using Smod2.API;
 using Smod2.EventHandlers;
 using Smod2.Events;
@@ -62,7 +61,7 @@ namespace SCP_457
 		public void OnPlayerHurt(PlayerHurtEvent ev)
 		{
 			if (!plugin.hasScp457 || !plugin.IsScp457(ev.Attacker) || plugin.IsScp457(ev.Player) || ev.Player.TeamRole.Team == Team.SCP || ev.Player.TeamRole.Team == Team.TUTORIAL && Scp457TutorialAllies) return;
-			
+
 			// Don't actually do any damage
 			ev.Damage = 0f;
 			ev.DamageType = DamageType.POCKET;
