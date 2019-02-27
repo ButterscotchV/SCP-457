@@ -137,9 +137,9 @@ namespace SCP_457
 				if (player == null)
 					return;
 
-				player.SetRank("red", "SCP-457");
 				active457List.Add(new Scp457Controller(this, EventLogic, player.PlayerId));
 				player.ChangeRole(Role.SCP_106);
+				player.SetRank("red", "SCP-457");
 
 				hasScp457 = active457List.Count > 0;
 			}
