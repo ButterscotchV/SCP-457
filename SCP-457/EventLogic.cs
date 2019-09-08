@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Smod2;
 using Smod2.API;
 using Smod2.EventHandlers;
 using Smod2.Events;
@@ -82,7 +83,7 @@ namespace SCP_457
 			Player scp457Player = null;
 
 			List<Player> list = new List<Player>();
-			foreach (Player player in plugin.pluginManager.Server.GetPlayers())
+			foreach (Player player in PluginManager.Manager.Server.GetPlayers())
 			{
 				if (player.TeamRole.Role == Role.SCP_106)
 				{
